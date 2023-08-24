@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Howest@TheMovies</title>
+        <link rel="stylesheet" href="assets/Css/style.css">
+        <script src="assets/Js/script.js"></script>
+        <script src="assets/Js/dragover.js"></script>
+    </head>
+
+    <body>
+    <h1>Howest@TheMovies</h1>
+        <div id="welcome">
+            <h2>Welcome to Howest@TheMovies</h2>
+            <div id="finishPurchaseStart"></div>
+            <button id="startButton" data-target="search">Purchase a ticket</button>
+        </div>
+
+        <div id="search" class="hidden">
+            <h2>Search for a movie based on (part of) title</h2>
+                <form id="zoekformulier">
+                    <label for="filmnaam">Filmnaam:</label>
+                    <input type="text" id="filmnaam" name="filmnaam">
+                    <input type="submit" data-target="movie-selection" value="Zoeken">
+                </form>
+        </div>
+
+        <div id="movie-selection" class="hidden">
+            <h2>Select your favourite movie by dragging it to the box at the bottom</h2>
+            <div id="films"></div>
+            <div id="target"></div>
+        </div>
+
+        <div id="details" class="hidden">
+            <h2>Provide some details to complete your ticket purchase</h2>
+            <form id="detailsForm">
+                <label for="dropdown">Kies een Snack:</label>
+                <select id="dropdown" name="dropdown">
+                    <option value="Nachos">Nachos</option>
+                    <option value="Popcorn">Popcorn</option>
+                    <option value="Lemonade">Lemonade</option>
+                </select>
+
+                <label for="tickets">Tickets (1-8):</label>
+                <input type="number" min="1" max="8" id="tickets" name="tickets">
+
+                <label for="naam">Your name:</label>
+                <input type="text" id="naam" name="naam">
+
+                <label for="email">Your e-mail:</label>
+                <input type="text" id="email" name="email">
+            </form>
+            <button id="form-submit" data-target="thank-you">Bevestigen</button>
+        </div>
+
+        <div id="thank-you" class="hidden">
+            <div id="finishPurchase"></div>
+            <button id="anotherPurchase" data-target="welcome">Add another purchase</button>
+        </div>
+
+    </body>
+</html>
